@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <h1>Atividade 5</h1>
+    <div id="resultado"></div>
+    <script>
+        const produtos = [];
+        const quantidade = [];
+        let html = '<h2>Produtos Cadastrados</h2><ul>';
+
+        for (let i = 1; i <= 4; i++) {
+            let codigoProduto = prompt('Digite o código do produto:');
+            let quantidadeProduto = prompt('Digite a quantidade em estoque do Produto:');
+
+            produtos.push(codigoProduto);
+            quantidade.push(quantidadeProduto);
+        }
+
+        for (let p = 0; p < produtos.length; p++) {
+            html += `<li>Código: ${produtos[p]}, Quantidade: ${quantidade[p]}</li>`;
+        }
+
+        html += '</ul>';
+        const resultado = document.getElementById('resultado');
+        resultado.innerHTML = html;
+    </script>
+</body>
+</html>

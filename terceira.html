@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicado por 3</title>
+</head>
+<body>
+    <h1>Números Multiplicado por 3</h1>
+    <div id="multiplicar"></div>
+
+    <script>
+       const numeros = []
+       let numero
+       const multiplicados = []
+
+       for (i = 0; i < 3; i++) {
+        numero = (prompt("Digite os números: "))
+        numeros.push(numero)
+
+        multiplicados.push(numeros[i] * 3)
+       }
+
+       document.getElementById("tudo").innerHTML = "Primeiro array: " + numeros + "Números do array multiplicados por 3: " + multiplicados
+
+    </script>
+</body>
+</html>

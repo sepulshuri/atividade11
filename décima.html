@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    <h1> Operações com vetores</h1>
+    <div id="vetores"></div>
+    <button onclick="lerVetores()">Ler Vetores de Códigos</button>
+
+    <script>
+        const codigos = [];
+        const mercadorias = [];
+
+        function lerVetores(){
+            for(let i = 0; i < 3; i++){
+                let condigoMercadoria = Number(prompt("Escreva seu código da mercadoria: " + (i + 1)));
+                let quantidadeMercadoria = Number(prompt("Escreva a quantidade da mercadoria: " + (i + 1)));
+                codigos.push(condigoMercadoria)
+                mercadorias.push(quantidadeMercadoria)
+            }
+            ordernarPorQuantidade();
+            exibirCodigosQuantidades();
+        }
+        function ordernarPorQuantidade(){
+            for(let i = 0; i < 3; i++){
+                for(let j = i + 1; j < mercadorias.length; j++){
+                    if (mercadorias[i] > mercadorias[j]){
+                        let tempQuantidade = mercadorias[i];
+                        mercadorias[j] = tempQuantidade;
+
+                        let tempCodigo = codigos[i];
+                        codigos[i] = codigos[j];
+                        codigos[j] = tempCodigo;
+                    }
+                }                    
+            }
+        }
+        function exibirCodigosQuantidades() {
+            let vetoresHTML = "<h2> Códigos e quantidade de ordem crescente de quantidade</h2><ul>"
+                for(let i = 0; i < codigos.length; i++){
+                    vetoresHTML += "<li>Código: " + codigos[i] + ", Quantidade: " + mercadorias[i] + "</li>"
+                }
+                vetoresHTML += "</ul>";
+
+                document.getElementById("vetores").innerHTML = vetoresHTML
+        }
+
+
+    </script>
+
+</body>
+</html>

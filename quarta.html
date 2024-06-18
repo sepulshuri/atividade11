@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <div id="tudo"></div>
+
+    <script>
+        const professores = []
+        let nomes
+        const profissao = []
+        let tempo
+
+        for (i = 0; i < 3; i++)  {;
+            nomes = (prompt("Digite os nomes dos professores: "))
+            professores.push(nomes)
+            tempo = (prompt("Digite os tempos de profissão"))
+            profissao.push(tempo)
+        }
+
+        document.getElementById("tudo").innerHTML = "Nomes dos professores: " + professores + "<br> Tempos de profissão dos professores: " + profissao;
+    </script>
+</body>
+</html>

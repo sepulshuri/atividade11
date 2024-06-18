@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Inversos</title>
+</head>
+<body>
+    <h1>Números Inversos</h1>
+    <div id="listarNumeros"></div>
+
+    <script>
+        const numeros = [];
+
+        for (let i = 0; i < 200; i++) {
+            let numero = prompt("Digite o número que deseja." + (i+1));
+            numeros.push(numero);
+        }
+
+        let listaInversa = "";
+            for (let inverter = numeros.length - 1; inverter >= 0; inverter--) {
+            listaInversa += numeros[inverter] + "<br>";
+        }
+
+        
+        document.getElementById("listarNumeros").innerHTML = listaInversa;
+        
+    </script>
+</body>
+</html>

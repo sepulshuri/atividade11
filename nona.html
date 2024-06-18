@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+<body>
+    <h1>Registro de Professores</h1>
+    <div id="faculdade"></div>
+
+    <script>
+        const faculdade = []
+        let opcao = prompt("Deseja cadastrar um(a) Professor(a)? \n 1 - Sim \n 2 - Não");
+
+        while (opcao == "1"){
+            let prof = prompt("Digite o nome do(a) professor(a):")
+            let tempo = prompt("Digite o tempo de profissão que o(a) professora(a) possui:");
+            faculdade.push("Prof(a): " + prof + " ." + "Tempo de Experiência")
+
+            opcao = prompt("Deseja cadastrar um(a) Professor(a)? \n 1 - Sim \n 2 - Não");
+        }
+
+        function exibir() {
+            let faculdadeHtml = "<ol>"
+                for (let i = faculdade.length - 1; i >= 0; i--){
+                    faculdadeHtml += "<li>" + faculdade[i] + "</li>";
+                }
+                faculdadeHtml = "</ol>"
+            
+            document.getElementById('faculdade').innerHTML = "Nome do Professor(a), e seu tempo de Experiência." + faculdadeHtml;
+        }
+        exibir()
+
+    </script>
+</body>
+</html>
